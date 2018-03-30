@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.swift.Client_Home">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <Button
+            android:id="@+id/client_home_delivery_btn"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/ripple_effect_navyblue_bg"
+            android:text="Delivery"
+            android:textAllCaps="false"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            android:onClick="goToDeliveryForm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/client_home_select_service_txtVw" />
+
+        <Button
+            android:id="@+id/client_home_pickup_btn"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ripple_effect_navyblue_bg"
+            android:text="Pickup"
+            android:onClick="goToPickupForm"
+            android:textAllCaps="false"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/client_home_delivery_btn"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/client_home_delivery_btn"
+            app:layout_constraintTop_toBottomOf="@+id/client_home_delivery_btn" />
+
+        <TextView
+            android:id="@+id/client_home_select_service_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="136dp"
+            android:text="Select a service"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_section_fragment" />
+
+        <fragment
+            android:id="@+id/top_section_fragment"
+            android:name="app.swift.TopSectionFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout="@layout/top_section_fragment" />
+    </android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/bottomBar"
+        android:layout_alignParentBottom="true">
+
+        <android.support.design.widget.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bottomNavView_Bar"
+            android:background="@drawable/white_grey_border_top"
+            app:itemTextColor="@color/bottom_navigation_item_foreground"
+            app:itemIconTint="@color/bottom_navigation_item_foreground"
+            app:menu="@menu/client_bottom_navigation_menu">
+
+
+        </android.support.design.widget.BottomNavigationView>
+
+    </RelativeLayout>
+</RelativeLayout>

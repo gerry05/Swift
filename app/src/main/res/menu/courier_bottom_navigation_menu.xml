@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_post"
+        android:icon="@drawable/post_active_bg"
+        android:title="Posts"/>
+
+    <item
+        android:id="@+id/ic_request"
+        android:icon="@drawable/request_active_bg"
+        android:title="Requests"/>
+    <item
+        android:id="@+id/ic_transaction"
+        android:icon="@drawable/transaction_active_bg"
+        android:title="Transaction"/>
+
+    <item
+        android:id="@+id/ic_notifications"
+        android:icon="@drawable/notification_active_bg"
+        android:title="Notifications"/>
+
+</menu>

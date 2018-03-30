@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundColor"
+    tools:context="app.swift.PickupDelivery_Form">
+
+    <Button
+        android:id="@+id/back_btn4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="backToUserHome"
+        android:background="@drawable/back_btn"
+        />
+
+    <EditText
+        android:id="@+id/pickup_eTxt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/back_btn4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="74dp"
+        android:background="@color/FormColor"
+        android:hint="Pickup Location"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/BackgroundColor"
+        android:textColorHint="@color/PlaceHolderColor" />
+
+    <EditText
+        android:id="@+id/dropoff_eTxt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/pickup_eTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/FormColor"
+        android:hint="Drop-off Location"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/BackgroundColor"
+        android:textColorHint="@color/PlaceHolderColor" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/dropoff_eTxt"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="40dp"
+        android:text="POST"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:background="@color/BlueColor"
+        android:textColor="@color/WhiteColor"
+        android:onClick="post_PickupInfo"/>
+
+
+
+
+</RelativeLayout>

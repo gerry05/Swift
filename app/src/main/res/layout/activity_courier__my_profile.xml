@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="app.swift.Courier_MyProfile">
+
+        <ImageView
+            android:id="@+id/courier_profile"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="70dp"
+            android:scaleType="fitCenter"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/temporary_profile" />
+
+
+        <RatingBar
+            android:id="@+id/courier_profile_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:isIndicator="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courier_profile" />
+
+        <ImageView
+            android:id="@+id/courier_profile_users_count_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="60dp"
+            app:layout_constraintEnd_toEndOf="@+id/courier_profile_rating_bar"
+            app:layout_constraintTop_toBottomOf="@+id/courier_profile_rating_bar"
+            app:srcCompat="@drawable/courier_profile_users_icon" />
+
+        <TextView
+            android:id="@+id/courier_profile_users_count_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="0"
+            android:textColor="@color/GrayColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/courier_profile_users_count_icon"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/courier_profile_rating_bar"
+            app:layout_constraintTop_toTopOf="@+id/courier_profile_users_count_icon" />
+
+        <TextView
+            android:id="@+id/courier_profile_name_label_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="Name"
+            android:textColor="@color/GrayColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courier_profile_users_count_txtVw" />
+
+        <TextView
+            android:id="@+id/courier_fullName_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Raymart Salazar"
+            android:textColor="@color/BlackColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/courier_profile_name_label_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/courier_profile_name_label_txtVw" />
+
+        <TextView
+            android:id="@+id/courier_profile_gender_label_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Gender"
+            android:textColor="@color/GrayColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/courier_fullName_txt"
+            app:layout_constraintTop_toBottomOf="@+id/courier_fullName_txt" />
+
+        <TextView
+            android:id="@+id/courier_gender_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textColor="@color/BlackColor"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/courier_profile_gender_label_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/courier_profile_gender_label_txtVw" />
+
+        <TextView
+            android:id="@+id/courier_profile_address_label_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Address"
+            android:textColor="@color/GrayColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/courier_gender_txt"
+            app:layout_constraintTop_toBottomOf="@+id/courier_gender_txt" />
+
+        <TextView
+            android:id="@+id/courier_address_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Poblacion Ilaya, Dao Capiz"
+            android:textColor="@color/BlackColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/courier_profile_address_label_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/courier_profile_address_label_txtVw" />
+
+        <TextView
+            android:id="@+id/courier_profile_vehicle_label_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Vehicle"
+            android:textColor="@color/GrayColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/courier_address_txt"
+            app:layout_constraintTop_toBottomOf="@+id/courier_address_txt" />
+
+        <TextView
+            android:id="@+id/courier_vehicle_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bike"
+            android:textColor="@color/BlackColor"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/courier_profile_vehicle_label_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/courier_profile_vehicle_label_txtVw" />
+
+        <Button
+            android:id="@+id/showfeedbacks_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:background="@color/BlueColor"
+            android:textColor="@color/WhiteColor"
+            app:layout_constraintTop_toBottomOf="@id/courier_vehicle_txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="show feedbacks"
+            />
+        <Button
+            android:id="@+id/courier_profile_edit_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/ic_edit_black"
+            android:onClick="goToCourierEditProfile"
+            android:textAllCaps="false"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/courier_profile" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BackgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/courier_profile_txtVw"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="Your Profile"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/courier_profile_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/back_btn"
+            android:onClick="backToCourierNavMenu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

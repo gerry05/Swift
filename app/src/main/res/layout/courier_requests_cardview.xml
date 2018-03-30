@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/courier_view_post_cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="40dp"
+    android:layout_marginStart="40dp"
+    android:layout_marginTop="18dp"
+    android:background="#000000"
+    android:elevation="15dp"
+    app:cardCornerRadius="2dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/postLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <ImageView
+            android:id="@+id/courier_view_post_profile_icon"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/people_icon" />
+
+        <TextView
+            android:id="@+id/courier_view_post_fname_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courier_view_post_cardview_btn"
+            android:layout_alignBottom="@+id/courier_view_post_cardview_btn"
+            android:layout_alignStart="@+id/courier_view_post_profile_icon"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Name"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/courier_view_post_profile_icon"
+            app:layout_constraintTop_toTopOf="@+id/courier_view_post_profile_icon" />
+
+        <TextView
+            android:id="@+id/courier_view_post_title_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/courier_view_post_fname_txtVw"
+            android:layout_below="@+id/courier_view_post_fname_txtVw"
+            android:text="Client"
+            app:layout_constraintStart_toStartOf="@+id/courier_view_post_fname_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/courier_view_post_fname_txtVw" />
+        <TextView
+            android:id="@+id/courier_view_post_date_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            app:layout_constraintStart_toStartOf="@+id/courier_view_post_title_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/courier_view_post_title_txtVw" />
+
+        <Button
+            android:id="@+id/courier_view_post_cardview_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:text="View full details"
+            android:textAllCaps="false"
+            android:textColor="@color/BlueColor"
+            android:textSize="13sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/courier_view_post_fname_txtVw"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/courier_view_post_amount_label_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/courier_view_post_title_txtVw"
+            android:layout_below="@+id/courier_view_post_profile_icon"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:text="Amount"
+            app:layout_constraintStart_toStartOf="@+id/courier_view_post_profile_icon"
+            app:layout_constraintTop_toBottomOf="@+id/courier_view_post_profile_icon" />
+
+        <TextView
+            android:id="@+id/courier_view_post_amount_to_amount_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/courier_view_post_amount_label_txtVw"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@+id/courier_view_post_title_txtVw"
+            android:text="₱15"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/courier_view_post_amount_label_txtVw"
+            app:layout_constraintStart_toStartOf="@+id/courier_view_post_amount_label_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/courier_view_post_amount_label_txtVw" />
+
+        <TextView
+            android:id="@+id/courier_view_post_distance_label_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/courier_view_post_amount_label_txtVw"
+            android:layout_marginEnd="50dp"
+            android:layout_toEndOf="@+id/courier_view_post_fname_txtVw"
+            android:text="Distance"
+            app:layout_constraintBaseline_toBaselineOf="@+id/courier_view_post_amount_label_txtVw"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/courier_view_post_the_distance_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/courier_view_post_amount_to_amount_txtVw"
+            android:layout_alignBottom="@+id/courier_view_post_amount_to_amount_txtVw"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@+id/courier_view_post_cardview_btn"
+            android:text="1km"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/courier_view_post_amount_to_amount_txtVw"
+            app:layout_constraintEnd_toEndOf="@+id/courier_view_post_distance_label_txtVw"
+            app:layout_constraintStart_toStartOf="@+id/courier_view_post_distance_label_txtVw" />
+
+        <TextView
+            android:id="@+id/courier_view_post_pickup_label_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Pick-up location"
+            app:layout_constraintStart_toStartOf="@+id/courier_view_post_delivery_type_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/courier_view_post_delivery_type_txtVw" />
+
+        <TextView
+            android:id="@+id/courier_view_post_the_pickup_location_txtVw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Address"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/courier_view_post_cardview_btn"
+            app:layout_constraintStart_toStartOf="@+id/courier_view_post_pickup_label_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/courier_view_post_pickup_label_txtVw" />
+
+        <TextView
+            android:id="@+id/courier_view_post_dropoff_label_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Drop-off location"
+            app:layout_constraintStart_toStartOf="@+id/courier_view_post_pickup_label_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/courier_view_post_the_pickup_location_txtVw" />
+
+        <TextView
+            android:id="@+id/courier_view_post_the_dropoff_txtVw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/courier_view_post_the_pickup_location_txtVw"
+            app:layout_constraintStart_toStartOf="@+id/courier_view_post_dropoff_label_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/courier_view_post_dropoff_label_txtVw" />
+
+        <Button
+            android:id="@+id/courier_view_post_cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/RedColor"
+            android:text="CANCEL"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/courier_view_post_ignore_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courier_view_post_the_dropoff_txtVw"
+            app:layout_constraintVertical_bias="0.426" />
+
+        <TextView
+            android:id="@+id/courier_view_post_delivery_type_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Delivery Type"
+            app:layout_constraintStart_toStartOf="@+id/courier_view_post_amount_label_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/courier_view_post_amount_to_amount_txtVw" />
+
+        <TextView
+            android:id="@+id/courier_view_post_delivery_type_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="@+id/courier_view_post_delivery_type_label"
+            app:layout_constraintTop_toBottomOf="@+id/courier_view_post_delivery_type_label" />
+
+        <!--<Button-->
+            <!--android:id="@+id/courier_view_post_ignore_btn"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:background="@color/RedColor"-->
+            <!--android:text="Ignore"-->
+            <!--android:textColor="@color/WhiteColor"-->
+            <!--android:textSize="18sp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.5"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/courier_view_post_request_btn"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/courier_view_post_request_btn" />-->
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
+
+

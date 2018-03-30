@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="app.swift.Courier_Post_viewProfile">
+
+            <ImageView
+                android:id="@+id/riders_profile_profile_icon"
+                android:layout_width="0dp"
+                android:layout_height="155dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/temporary_profile" />
+
+            <RatingBar
+                android:id="@+id/riders_profile_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:isIndicator="true"
+                app:layout_constraintEnd_toEndOf="@+id/riders_profile_profile_icon"
+                app:layout_constraintStart_toStartOf="@+id/riders_profile_profile_icon"
+                app:layout_constraintTop_toBottomOf="@+id/riders_profile_profile_icon" />
+
+            <TextView
+                android:id="@+id/riders_profile_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:text="Name"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/riders_profile_total_rate_txtVw" />
+
+            <TextView
+                android:id="@+id/riders_profile_name_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/riders_profile_name_label"
+                app:layout_constraintTop_toBottomOf="@+id/riders_profile_name_label" />
+
+            <TextView
+                android:id="@+id/riders_profile_gender_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Gender"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/riders_profile_name_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/riders_profile_name_txtVw" />
+
+            <TextView
+                android:id="@+id/riders_profile_gender_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/riders_profile_gender_label"
+                app:layout_constraintTop_toBottomOf="@+id/riders_profile_gender_label" />
+
+            <TextView
+                android:id="@+id/riders_profile_address_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Address"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/riders_profile_gender_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/riders_profile_gender_txtVw" />
+
+            <TextView
+                android:id="@+id/riders_profile_address_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/riders_profile_address_label"
+                app:layout_constraintTop_toBottomOf="@+id/riders_profile_address_label" />
+
+
+            <Button
+                android:id="@+id/showfeedbacks_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:background="@color/BlueColor"
+                android:textColor="@color/WhiteColor"
+                app:layout_constraintTop_toBottomOf="@id/riders_profile_address_txtVw"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="show feedbacks"
+                />
+
+
+            <!--<Button-->
+            <!--android:id="@+id/riders_profile_hire_btn"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_marginBottom="16dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:background="@drawable/ripple_effect_green_bg"-->
+            <!--android:text="Hire"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:textColor="@color/WhiteColor"-->
+            <!--android:textSize="18sp"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toStartOf="@+id/riders_profile_decline_btn"-->
+            <!--app:layout_constraintHorizontal_bias="0.5"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/riders_profile_decline_btn" />-->
+
+            <!--<Button-->
+            <!--android:id="@+id/riders_profile_decline_btn"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:background="@drawable/ripple_effect_red_bg"-->
+            <!--android:text="Decline"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:textColor="@color/WhiteColor"-->
+            <!--android:textSize="18sp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.5"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/riders_profile_hire_btn"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/showfeedbacks_btn" />-->
+
+            <TextView
+                android:id="@+id/riders_profile_total_rate_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center_horizontal"
+                android:text="1"
+                app:layout_constraintEnd_toEndOf="@+id/riders_profile_rating_bar"
+                app:layout_constraintStart_toStartOf="@+id/riders_profile_rating_bar"
+                app:layout_constraintTop_toBottomOf="@+id/riders_profile_rating_bar" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/riders_profile_rating_bar"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/riders_profile_total_rate_txtVw"
+                app:layout_constraintTop_toTopOf="@+id/riders_profile_total_rate_txtVw"
+                app:srcCompat="@drawable/people_icon" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/BackgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/riders_profile_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="backToCourierHome"
+            android:background="@drawable/back_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/riders_profile_titlebar_txtVw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="Client's Profile"
+            android:textColor="@color/WhiteColor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

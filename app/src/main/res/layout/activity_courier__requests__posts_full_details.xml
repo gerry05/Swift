@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.swift.Courier_Requests_Posts_fullDetails">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/client_post_layout"
+            android:layout_width="match_parent"
+            android:background="@color/FormColor"
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp">
+
+
+
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/clientPost_post_txtVw"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:text="Full Details"-->
+            <!--android:textColor="@color/BackgroundColor"-->
+            <!--android:textSize="20sp"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/topBar" />-->
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="100dp"
+                android:background="@color/WhiteColor"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/clientPost_profile_icon"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/temporary_profile" />
+
+                <TextView
+                    android:id="@+id/clientPost_name_txtVw"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/clientPost_profile_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/clientPost_title_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Client"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_name_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_name_txtVw" />
+                <TextView
+                    android:id="@+id/clientPost_date_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_title_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_title_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_pay_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Amount"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_profile_icon"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_profile_icon" />
+
+                <TextView
+                    android:id="@+id/clientPost_money_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="₱"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/clientPost_pay_txtVw"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_pay_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_pay_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_distance_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="60dp"
+                    android:text="Distance"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/clientPost_pay_txtVw"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/clientPost_kilometer_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="km"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/clientPost_money_txtVw"
+                    app:layout_constraintEnd_toEndOf="@+id/clientPost_distance_txtVw"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_distance_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_vehicle_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Vehicle"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_receiverNumber1_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_receiverNumber1_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_vehicle_txtVw2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Vehicle"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_vehicle_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_vehicle_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_pickup_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Pick up location"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_vehicle_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_vehicle_txtVw2" />
+
+                <TextView
+                    android:id="@+id/clientPost_pickup_location_txtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Address"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_pickup_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_dropoff_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Drop off location"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_pickup_location_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_pickup_location_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_dropoff_location_txtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/clientPost_pickup_location_txtVw"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_dropoff_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_dropoff_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_documentype_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Type of Document"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_dropoff_location_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_dropoff_location_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_documentype1_txtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Document Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/clientPost_dropoff_location_txtVw"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_dropoff_location_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_documentype_txtVw" />
+                <TextView
+                    android:id="@+id/clientPost_quantity_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Quantity"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_documentype1_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_documentype1_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_quantity1_txtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_quantity_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_quantity_txtVw" />
+
+
+                <TextView
+                    android:id="@+id/clientPost_receiver_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Receiver's name"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_senderNumber1_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_senderNumber1_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_receiver1_txtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/clientPost_sender_name_txtVw"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_sender_name_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_receiver_txtVw" />
+                <TextView
+                    android:id="@+id/clientPost_receiverNumber_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Receiver's Number"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_receiver1_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_receiver1_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_receiverNumber1_txtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="09123456789"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_receiverNumber_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_receiverNumber_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_instructions_txtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Instructions"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_quantity1_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_quantity1_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_instructions1_txtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="29dp"
+                    android:text="Instructions"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_instructions_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_instructions_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_sender_name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Sender's name"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_delivery_type_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_delivery_type_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_sender_name_txtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_sender_name_label"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_sender_name_label" />
+
+                <TextView
+                    android:id="@+id/clientPost_senderNumber_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Sender's Number"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_sender_name_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_sender_name_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_senderNumber1_txtVw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="09123456789"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_senderNumber_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_senderNumber_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_delivery_type_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Delivery Type"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_pay_txtVw"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_money_txtVw" />
+
+                <TextView
+                    android:id="@+id/clientPost_delivery_type_txtVw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Type"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintStart_toStartOf="@+id/clientPost_delivery_type_label"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_delivery_type_label" />
+
+                <Button
+                    android:id="@+id/courier_view_post_cancel_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/RedColor"
+                    android:text="cancel"
+                    android:textColor="@color/WhiteColor"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/courier_view_post_ignore_btn"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clientPost_instructions1_txtVw"
+                    app:layout_constraintVertical_bias="0.426" />
+
+                <!--<Button-->
+                <!--android:id="@+id/courier_view_post_ignore_btn"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="45dp"-->
+                <!--android:background="@color/RedColor"-->
+                <!--android:text="Ignore"-->
+                <!--android:textColor="@color/WhiteColor"-->
+                <!--android:textSize="18sp"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintHorizontal_bias="0.5"-->
+                <!--app:layout_constraintStart_toEndOf="@+id/courier_view_post_request_btn"-->
+                <!--app:layout_constraintTop_toTopOf="@+id/courier_view_post_request_btn" />-->
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <!--<fragment-->
+            <!--android:id="@+id/top_section_fragment1"-->
+            <!--android:name="app.swift.TopSectionFragment"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--tools:layout="@layout/top_section_fragment" />-->
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BackgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/deliveryReview_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/back_btn"
+            android:onClick="backToCourierHome"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/deliveryReview_titlebar_txtVw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="Delivery Details"
+            android:textColor="@color/WhiteColor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noPost_layout"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="No Post"
+            android:textSize="50dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

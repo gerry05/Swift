@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout1"
+        android:layout_width="330dp"
+        android:layout_height="450dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp"
+        android:background="#fff"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/courier_rate_client_txtVw1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="90dp"
+            android:gravity="center_horizontal"
+            android:text="Please rate "
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/courier_rate_client_ratingcount_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="1"
+            android:textColor="@color/colorGrey"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/courier_rate_client_txtVw1"
+            app:layout_constraintStart_toStartOf="@+id/courier_rate_client_txtVw1"
+            app:layout_constraintTop_toBottomOf="@+id/courier_rate_client_txtVw1" />
+
+        <RatingBar
+            android:id="@+id/courier_rate_client_ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:numStars="5"
+            android:rating="1"
+            android:stepSize="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courier_rate_client_ratingcount_txtVw" />
+
+        <TextView
+            android:id="@+id/courier_rate_client_feedback_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Feedback"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/courier_rate_client_ratingBar"
+            app:layout_constraintStart_toStartOf="@+id/courier_rate_client_ratingBar"
+            app:layout_constraintTop_toBottomOf="@+id/courier_rate_client_ratingBar" />
+
+
+        <Button
+            android:id="@+id/courier_rate_client_submit_btn"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:background="@color/BlueColor"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/courier_rate_client_nothanks_btn" />
+        <Button
+            android:id="@+id/courier_rate_client_nothanks_btn"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/RedColor"
+            android:text="No, thanks"
+            android:textAllCaps="false"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courier_rate_client_feedback_eTxt" />
+
+
+
+        <EditText
+            android:id="@+id/courier_rate_client_feedback_eTxt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/FormColor"
+            android:ems="10"
+            android:gravity="top|left"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:maxLines="4"
+            android:inputType="textMultiLine"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courier_rate_client_feedback_txtVw" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/courier_rate_client_profile_icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/temporary_profile" />
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.swift.Courier_Home">
+
+    <TextView
+        android:id="@+id/noPost_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="NO POST"
+        android:textSize="50dp"
+        android:visibility="gone"/>
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp"
+        >
+
+
+        <fragment
+            android:id="@+id/top_section_fragment"
+            android:name="app.swift.CourierTopSectionFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout="@layout/activity_courier_top_section_fragment" />
+
+
+        <TextView
+            android:id="@+id/courier_posts_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:text="Posts"
+            android:textColor="@color/BackgroundColor"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_section_fragment" />
+        <Spinner
+            android:id="@+id/vehicles_spinner"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_section_fragment" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/courier_posts_recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="90dp"
+            app:layout_constraintStart_toStartOf="@id/top_section_fragment"
+            app:layout_constraintEnd_toEndOf="@id/top_section_fragment"
+            app:layout_constraintTop_toBottomOf="@+id/top_section_fragment"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/courier_bottomNavView_Bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_grey_border_top"
+            app:itemIconTint="@color/bottom_navigation_item_foreground"
+            app:itemTextColor="@color/bottom_navigation_item_foreground"
+            app:menu="@menu/courier_bottom_navigation_menu">
+
+
+        </android.support.design.widget.BottomNavigationView>
+
+    </RelativeLayout>
+</RelativeLayout>
+

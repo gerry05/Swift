@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.swift.SignUpProfile"
+    tools:layout_editor_absoluteY="25dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@color/BackgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <Button
+            android:id="@+id/back_btn3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/back_btn"
+            android:onClick="backToLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/sign_up_profile_creation_profile_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile_icon" />
+
+        <TextView
+            android:id="@+id/sign_up_profile_creation_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Create your profile"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_profile_creation_profile_icon" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/sign_up_profile_creation_name_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@color/BackgroundColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:srcCompat="@drawable/name_icon" />
+
+    <EditText
+        android:id="@+id/sign_up_fname_eTxt"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/FormColor"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:textColor="@color/BackgroundColor"
+        android:textColorHint="@color/PlaceHolderColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sign_up_profile_creation_name_icon"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_profile_creation_name_icon" />
+
+    <ImageView
+        android:id="@+id/sign_up_profile_creation_name_icon2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/BackgroundColor"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_profile_creation_name_icon"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_profile_creation_name_icon"
+        app:srcCompat="@drawable/name_icon" />
+
+    <EditText
+        android:id="@+id/sign_up_lname_eTxt"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/FormColor"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:textColor="@color/BackgroundColor"
+        android:textColorHint="@color/PlaceHolderColor"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_fname_eTxt"
+        app:layout_constraintStart_toEndOf="@+id/sign_up_profile_creation_name_icon2"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_fname_eTxt" />
+
+    <ImageView
+        android:id="@+id/sign_up_profile_creation_address_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/BackgroundColor"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_profile_creation_name_icon2"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_profile_creation_name_icon2"
+        app:srcCompat="@drawable/address_icon" />
+
+    <EditText
+        android:id="@+id/sign_up_address_eTxt"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/FormColor"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:textColor="@color/BackgroundColor"
+        android:textColorHint="@color/PlaceHolderColor"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_lname_eTxt"
+        app:layout_constraintStart_toEndOf="@+id/sign_up_profile_creation_address_icon"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_lname_eTxt" />
+
+    <ImageView
+        android:id="@+id/sign_up_profile_creation_gender_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/BackgroundColor"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_profile_creation_address_icon"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_profile_creation_address_icon"
+        app:srcCompat="@drawable/gender_icon" />
+
+    <RadioGroup
+        android:id="@+id/RGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
+        android:paddingLeft="70dp"
+        android:gravity="center"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_profile_creation_address_icon"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_profile_creation_address_icon">
+
+        <RadioButton
+            android:id="@+id/sign_up_male_Rbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:buttonTint="@color/YellowColor"
+            android:checked="true"
+            android:text="Male"
+            android:textColor="@android:color/black"/>
+
+        <RadioButton
+            android:id="@+id/sign_up_female_Rbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/YellowColor"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="Female"
+            android:textColor="@android:color/black" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/sign_up_profile_next_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:background="@color/BlueColor"
+        android:textColor="@color/WhiteColor"
+        android:text="Next"
+        android:onClick="next_enterMobile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_address_eTxt"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_profile_creation_address_icon"
+        app:layout_constraintTop_toBottomOf="@+id/RGroup1"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>

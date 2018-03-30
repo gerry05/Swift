@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Swift</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="or">or</string>
+    <string name="imageputa">imagePuta</string>
+    <string name="create"><u>Create an account</u></string>
+    <string name="title_activity_home_with_nav_drawer">Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="android_studio">Android Studio</string>
+    <string name="android_studio_android_com">android.studio@android.com</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="profile">Profile</string>
+    <string name="Profile">Profile</string>
+    <string name="Home">Home</string>
+    <string name="title_activity_user_becomes_driver">Become a Driver</string>
+    <string name="driver">Become a Driver</string>
+    <string name="title_activity_courier_home">Courier Home</string>
+    <string name="title_activity_courier_profile">Courier Profile</string>
+    <string name="title_activity_user__home">User_Home</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_client__home">Client_Home</string>
+    <string name="title_activity_courier__home">Courier_Home</string>
+
+    <!--SWEET DIALOG BUTTON COLOR-->
+    <color name="blue_btn_bg_color">#3976b4</color>
+    <color name="blue_btn_bg_pressed_color">#1976b4</color>
+    <color name="gray_btn_bg_color">#e74c3c</color>
+</resources>

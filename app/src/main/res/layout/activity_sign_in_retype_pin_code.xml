@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="app.swift.SignInRetypePinCode">
+
+    <com.goodiebag.pinview.Pinview
+        android:id="@+id/pinView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+        app:pinWidth="40dp"
+        app:pinHeight="40dp"
+        app:pinLength="4"
+        app:cursorVisible="true"
+        app:forceKeyboard="true"
+        app:hint="0"
+        app:inputType="number"
+        app:password="true"
+        />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pinView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="99dp"
+        android:layout_marginTop="130dp"
+        android:text="Re-enter Pin Code"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="18sp" />
+
+
+
+</RelativeLayout>

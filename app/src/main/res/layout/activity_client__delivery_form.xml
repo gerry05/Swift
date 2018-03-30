@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clientDeliveryForm_layout"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="app.swift.Client_DeliveryForm">
+
+
+        <RadioGroup
+            android:id="@+id/deliveryForm_vehicle_rGroup"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="70dp"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/deliveryForm_vehicle_bike_rBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/BackgroundColor"
+                android:checked="true"
+                android:text="Bicycle"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/deliveryForm_vehicle_motorcycle_rBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/BackgroundColor"
+                android:text="Motorcycle"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/deliveryForm_choose_vehicle_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="70dp"
+            android:text="Select vehicle"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/deliveryForm_vehicle_rGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/deliveryForm_pickup_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Pick up location"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/deliveryForm_choose_vehicle_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_vehicle_rGroup" />
+
+        <EditText
+            android:id="@+id/deliveryForm_pickupLocation_eTxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/FormColor"
+            android:ems="10"
+            android:hint="Please input specific address"
+            android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            android:textColor="@color/BackgroundColor"
+            android:textColorHint="@color/PlaceHolderColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_pickup_txtVw" />
+
+        <TextView
+            android:id="@+id/deliveryForm_drop_off_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Drop-off location"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/deliveryForm_pickupLocation_eTxt"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_pickupLocation_eTxt" />
+
+        <EditText
+            android:id="@+id/deliveryForm_dropoffLocation_eTxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/FormColor"
+            android:ems="10"
+            android:hint="Please input specific address"
+            android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            android:textColor="@color/BackgroundColor"
+            android:textColorHint="@color/PlaceHolderColor"
+            app:layout_constraintEnd_toEndOf="@+id/deliveryForm_pickupLocation_eTxt"
+            app:layout_constraintStart_toStartOf="@+id/deliveryForm_pickupLocation_eTxt"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_drop_off_txtVw" />
+
+        <TextView
+            android:id="@+id/deliveryForm_document_type_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Type of Document"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/deliveryForm_dropoffLocation_eTxt"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_dropoffLocation_eTxt" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="@+id/deliveryForm_dropoffLocation_eTxt"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="@+id/deliveryForm_document_type_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_document_type_txtVw" />
+
+        <TextView
+            android:id="@+id/deliveryForm_quantity_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Quantity"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/spinner1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+
+        <EditText
+            android:id="@+id/deliveryForm_quantity_eTxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/FormColor"
+            android:ems="10"
+            android:hint="Quantiy  Ex. 100"
+            android:inputType="number"
+            android:paddingLeft="5dp"
+            android:textColor="@color/BackgroundColor"
+            android:textColorHint="@color/PlaceHolderColor"
+            app:layout_constraintEnd_toEndOf="@+id/spinner1"
+            app:layout_constraintStart_toStartOf="@+id/deliveryForm_quantity_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_quantity_txtVw" />
+
+        <TextView
+            android:id="@+id/deliveryForm_receiver_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Receiver's name"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/deliveryForm_quantity_eTxt"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_quantity_eTxt" />
+
+        <EditText
+            android:id="@+id/deliveryForm_receiverName_eTxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/FormColor"
+            android:ems="10"
+            android:hint="Enter receiver's name"
+            android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            android:textColor="@color/BackgroundColor"
+            android:textColorHint="@color/PlaceHolderColor"
+            app:layout_constraintEnd_toEndOf="@+id/spinner1"
+            app:layout_constraintStart_toStartOf="@+id/deliveryForm_receiver_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_receiver_txtVw" />
+
+        <TextView
+            android:id="@+id/deliveryForm_receiverNumber_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Receiver's number"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/deliveryForm_receiverName_eTxt"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_receiverName_eTxt" />
+
+        <EditText
+            android:id="@+id/deliveryForm_receiverNumber_eTxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/FormColor"
+            android:ems="10"
+            android:hint="Ex. 09123456789"
+            android:maxLength="11"
+            android:inputType="number"
+            android:paddingLeft="5dp"
+            android:textColor="@color/BackgroundColor"
+            android:textColorHint="@color/PlaceHolderColor"
+            app:layout_constraintEnd_toEndOf="@+id/spinner1"
+            app:layout_constraintStart_toStartOf="@+id/deliveryForm_receiverNumber_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_receiverNumber_txtVw" />
+
+        <TextView
+            android:id="@+id/deliveryForm_instructions_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Instructions"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/deliveryForm_receiverNumber_eTxt"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_receiverNumber_eTxt" />
+
+        <EditText
+            android:id="@+id/deliveryForm_instructions_eTxt"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/FormColor"
+            android:ems="10"
+            android:gravity="left"
+            android:hint="Add instruction here..."
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:paddingLeft="5dp"
+            android:textColor="@color/BackgroundColor"
+            android:textColorHint="@color/PlaceHolderColor"
+            app:layout_constraintEnd_toEndOf="@+id/deliveryForm_receiverNumber_eTxt"
+            app:layout_constraintStart_toStartOf="@+id/deliveryForm_receiverNumber_eTxt"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_instructions_txtVw" />
+
+        <Button
+            android:id="@+id/deliveryForm_next_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:height="45dp"
+            android:background="@drawable/ripple_effect_navyblue_bg"
+            android:text="Next"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            android:onClick="goToDeliveryFormReview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/deliveryForm_instructions_eTxt"
+            app:layout_constraintStart_toStartOf="@+id/deliveryForm_instructions_eTxt"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryForm_instructions_eTxt" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BackgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/delivery_form_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="backToHome"
+            android:background="@drawable/back_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/delivery_form_titlebar_txtVw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="Delivery Information"
+            android:textColor="@color/WhiteColor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</RelativeLayout>

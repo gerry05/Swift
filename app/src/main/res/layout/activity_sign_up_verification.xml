@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.swift.SignUpVerification">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/signUp_form1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="287dp"
+            android:background="@color/BackgroundColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <Button
+                android:id="@+id/back_btn4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:onClick="backToLogin"
+                android:background="@drawable/back_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/sign_up_enter_mobile_mobile_icon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/mobile_icon" />
+
+            <TextView
+                android:id="@+id/sign_up_enter_mobile_txtVw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="Please enter your mobile number."
+                android:textAllCaps="false"
+                android:textColor="@color/WhiteColor"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sign_up_enter_mobile_mobile_icon" />
+
+            <TextView
+                android:id="@+id/sign_up_enter_mobile_txtVw1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/WhiteColor"
+                android:gravity="center_horizontal"
+                android:text="We will send a verification code."
+                app:layout_constraintEnd_toEndOf="@+id/sign_up_enter_mobile_txtVw"
+                app:layout_constraintStart_toStartOf="@+id/sign_up_enter_mobile_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/sign_up_enter_mobile_txtVw" />
+        </android.support.constraint.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/sign_up_enter_mobile_phone_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/BackgroundColor"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:srcCompat="@drawable/phone_icon" />
+
+        <EditText
+            android:id="@+id/sign_up_mobileNumber_eTxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@color/FormColor"
+            android:ems="10"
+            android:hint="Mobile Number"
+            android:inputType="number"
+            android:paddingLeft="5dp"
+            android:maxLength="10"
+            android:textColor="@color/BackgroundColor"
+            android:textColorHint="@color/PlaceHolderColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sign_up_enter_mobile_number_txtVw"
+            app:layout_constraintTop_toTopOf="@+id/sign_up_enter_mobile_number_txtVw" />
+
+        <TextView
+            android:id="@+id/sign_up_enter_mobile_number_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@color/FormColor"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="+63"
+            android:paddingRight="5dp"
+            android:textColor="@color/BackgroundColor"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/sign_up_enter_mobile_phone_icon"
+            app:layout_constraintTop_toTopOf="@+id/sign_up_enter_mobile_phone_icon" />
+
+        <Button
+            android:id="@+id/sign_up_send_number_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/GreenColor"
+            android:text="Send"
+            android:textAllCaps="false"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/sign_up_mobileNumber_eTxt"
+            app:layout_constraintStart_toStartOf="@+id/sign_up_enter_mobile_phone_icon"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_mobileNumber_eTxt"
+            app:layout_constraintVertical_bias="0.0" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/signUp_form2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout1"
+            android:layout_width="0dp"
+            android:layout_height="287dp"
+            android:background="@color/BackgroundColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+            <ImageView
+                android:id="@+id/sign_up_enter_mobile_verification_code_icon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/verification_code_icon" />
+
+            <TextView
+                android:id="@+id/sign_up_enter_mobile_txtVw2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="Please enter your verification code."
+                android:textAllCaps="false"
+                android:textColor="@color/WhiteColor"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sign_up_enter_mobile_verification_code_icon" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/sign_up_enter_mobile_lock_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/BackgroundColor"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout1"
+            app:srcCompat="@drawable/code_icon" />
+
+        <EditText
+            android:id="@+id/sign_up_code_eTxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Enter code..."
+            android:paddingLeft="5dp"
+            android:background="@color/FormColor"
+            android:textColor="@color/BackgroundColor"
+            android:textColorHint="@color/PlaceHolderColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sign_up_enter_mobile_lock_icon"
+            app:layout_constraintTop_toTopOf="@+id/sign_up_enter_mobile_lock_icon" />
+
+        <Button
+            android:id="@+id/sign_up_verify_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/BlueColor"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/sign_up_code_eTxt"
+            app:layout_constraintStart_toStartOf="@+id/sign_up_enter_mobile_lock_icon"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_code_eTxt" />
+
+        <Button
+            android:id="@+id/sign_up_resend_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/GreenColor"
+            android:text="Resend"
+            android:textAllCaps="false"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/sign_up_verify_btn"
+            app:layout_constraintStart_toStartOf="@+id/sign_up_verify_btn"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_verify_btn"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

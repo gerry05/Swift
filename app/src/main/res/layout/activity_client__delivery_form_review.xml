@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/FormColor"
+        android:layout_marginBottom="60dp"
+        tools:context="app.swift.Client_DeliveryFormReview">
+
+        <TextView
+            android:id="@+id/deliveryReview_review_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="70dp"
+            android:text="Review"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="100dp"
+            android:paddingBottom="16dp"
+            android:background="@color/WhiteColor"
+            app:layout_constraintBottom_toTopOf="@+id/deliveryReview_post_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/deliveryReview_profile_icon"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/temporary_profile" />
+
+            <TextView
+                android:id="@+id/deliveryReview_name_txtVw"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:text="Name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/deliveryReview_profile_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/deliveryReview_title_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Client"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_name_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_name_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_pay_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="You will pay"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_profile_icon"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_profile_icon" />
+
+            <TextView
+                android:id="@+id/deliveryReview_money_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="₱15"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/deliveryReview_pay_txtVw"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_pay_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_pay_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_distance_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:text="Distance"
+                app:layout_constraintBaseline_toBaselineOf="@+id/deliveryReview_pay_txtVw"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/deliveryReview_kilometer_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="1km"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/deliveryReview_money_txtVw"
+                app:layout_constraintEnd_toEndOf="@+id/deliveryReview_distance_txtVw"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_distance_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_vehicle_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Vehicle"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_senderNumber1_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_senderNumber1_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_vehicle_txtVw2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Vehicle"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_vehicle_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_vehicle_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_pickup_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pickup location"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_vehicle_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_vehicle_txtVw2" />
+
+            <TextView
+                android:id="@+id/deliveryReview_pickup_location_txtVw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Address"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_pickup_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_dropoff_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:text="Drop-off location"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_pickup_location_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_pickup_location_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_dropoff_location_txtVw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/deliveryReview_pickup_location_txtVw"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_dropoff_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_dropoff_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_documentype_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:text="Type of Document"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_dropoff_location_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_dropoff_location_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_documentype1_txtVw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Document Name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/deliveryReview_dropoff_location_txtVw"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_dropoff_location_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_documentype_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_quantity_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:text="Quantity"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_documentype1_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_documentype1_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_quantity1_txtVw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/deliveryReview_quantity_txtVw"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_quantity_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_quantity_txtVw" />
+
+
+            <TextView
+                android:id="@+id/deliveryReview_receiver_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:text="Receiver's name"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_delivery_type_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_delivery_type_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_receiver1_txtVw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_receiver_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_receiver_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_receiverNumber_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:text="Receiver's Number"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_receiver1_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_receiver1_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_receiverNumber1_txtVw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="09123456789"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_receiverNumber_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_receiverNumber_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_senderName_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:text="Sender's name"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_receiverNumber1_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_receiverNumber1_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_senderName1_txtVw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_senderName_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_senderName_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_senderNumber_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:text="Sender's Number"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_senderName1_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_senderName1_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_senderNumber1_txtVw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="09123456789"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_senderNumber_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_senderNumber_txtVw" />
+
+
+            <TextView
+                android:id="@+id/deliveryReview_instructions_txtVw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Instructions"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_quantity1_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_quantity1_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_instructions1_txtVw"
+                android:layout_width="0dp"
+                android:layout_height="29dp"
+                android:text="Instructions"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_instructions_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_instructions_txtVw" />
+
+
+
+
+            <TextView
+                android:id="@+id/deliveryReview_delivery_type_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Delivery Type"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_pay_txtVw"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_money_txtVw" />
+
+            <TextView
+                android:id="@+id/deliveryReview_delivery_type_txtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deliver"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/deliveryReview_delivery_type_label"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryReview_delivery_type_label" />
+        </android.support.constraint.ConstraintLayout>
+
+        <Button
+            android:id="@+id/deliveryReview_post_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:height="45dp"
+            android:background="@drawable/ripple_effect_navyblue_bg"
+            android:text="POST"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            android:onClick="post_delivery"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout4" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+
+    <android.support.constraint.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BackgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/deliveryReview_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="backToDeliveryForm"
+            android:background="@drawable/back_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/deliveryReview_titlebar_txtVw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="Delivery Information Review"
+            android:textColor="@color/WhiteColor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

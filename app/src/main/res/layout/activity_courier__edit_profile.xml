@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="swift.Courier_EditProfile">
+
+
+        <ImageButton
+            android:id="@+id/courier_profile_imgBtn"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="70dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/temporary_profile" />
+
+        <ImageView
+            android:id="@+id/edit_profile_name_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@color/BackgroundColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courier_profile_imgBtn"
+            app:srcCompat="@drawable/edit_profile_name_icon" />
+
+        <EditText
+            android:id="@+id/courier_profile_firstName_eTxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@color/FormColor"
+            android:ems="10"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            android:textColor="@color/BackgroundColor"
+            android:textColorHint="@color/PlaceHolderColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edit_profile_name_icon"
+            app:layout_constraintTop_toTopOf="@+id/edit_profile_name_icon" />
+
+        <ImageView
+            android:id="@+id/edit_profile_lname_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@color/BackgroundColor"
+            app:layout_constraintStart_toStartOf="@+id/edit_profile_name_icon"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_name_icon"
+            app:srcCompat="@drawable/edit_profile_name_icon" />
+
+        <EditText
+            android:id="@+id/courier_profile_lastName_eTxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="Last Name"
+            android:background="@color/FormColor"
+            android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            android:textColor="@color/BackgroundColor"
+            android:textColorHint="@color/PlaceHolderColor"
+            app:layout_constraintEnd_toEndOf="@+id/courier_profile_firstName_eTxt"
+            app:layout_constraintStart_toEndOf="@+id/edit_profile_lname_icon"
+            app:layout_constraintTop_toTopOf="@+id/edit_profile_lname_icon" />
+
+        <ImageView
+            android:id="@+id/edit_profile_address_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@color/BackgroundColor"
+            app:layout_constraintStart_toStartOf="@+id/edit_profile_lname_icon"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_lname_icon"
+            app:srcCompat="@drawable/edit_profile_address_icon" />
+
+        <EditText
+            android:id="@+id/courier_profile_address_eTxt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Address"
+            android:background="@color/FormColor"
+            android:paddingLeft="5dp"
+            android:textColor="@color/BackgroundColor"
+            android:textColorHint="@color/PlaceHolderColor"
+            app:layout_constraintEnd_toEndOf="@+id/courier_profile_lastName_eTxt"
+            app:layout_constraintStart_toEndOf="@+id/edit_profile_address_icon"
+            app:layout_constraintTop_toTopOf="@+id/edit_profile_address_icon" />
+
+        <RadioGroup
+            android:id="@+id/courier_profile_gender_rGroup"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="70dp"
+            android:weightSum="2"
+            app:layout_constraintStart_toStartOf="@+id/edit_profile_address_icon"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_address_icon">
+
+            <RadioButton
+                android:id="@+id/courier_profile_male_Rbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/YellowColor"
+                android:text="Male"
+                android:textColor="@color/BlackColor"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/courier_profile_female_Rbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/YellowColor"
+                android:text="Female"
+                android:textColor="@color/BlackColor"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/edit_profile_gender_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@color/BackgroundColor"
+            app:layout_constraintStart_toStartOf="@+id/edit_profile_address_icon"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_address_icon"
+            app:srcCompat="@drawable/edit_profile_gender_icon" />
+
+        <ImageView
+            android:id="@+id/edit_profile_vehicle_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@color/BackgroundColor"
+            app:layout_constraintStart_toStartOf="@+id/edit_profile_gender_icon"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_gender_icon"
+            app:srcCompat="@drawable/edit_profile_vehicle_icon" />
+
+        <RadioGroup
+            android:id="@+id/courier_profile_vehicle_rGroup"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="70dp"
+            android:weightSum="5"
+            app:layout_constraintStart_toStartOf="@+id/edit_profile_gender_icon"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_gender_icon">
+
+            <RadioButton
+                android:id="@+id/courier_profile_bicycle_Rbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/YellowColor"
+                android:text="Bike"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/courier_profile_motorcycle_Rbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/YellowColor"
+                android:text="Motor"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+            <RadioButton
+                android:id="@+id/courier_profile_both_Rbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/YellowColor"
+                android:text="Both"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/courier_profile_done_btn"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:text="Done"
+            android:background="@color/GreenColor"
+            android:textColor="@color/WhiteColor"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_vehicle_icon" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BackgroundColor"
+        android:layout_alignParentTop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/courier_edit_profile_txtVw"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="Edit Profile"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/courier_profile_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/back_btn"
+            android:onClick="backToCourierMyProfile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

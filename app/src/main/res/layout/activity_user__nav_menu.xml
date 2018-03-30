@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.swift.User_NavMenu">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"
+        />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:background="@color/BackgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/nav_drawer_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/back_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="backToUserHome"
+            />
+
+        <ImageView
+            android:id="@+id/nav_drawer_user_profilePicture_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="100dp"
+            android:layout_marginEnd="130dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="40dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/nav_drawer_user_name_txtVw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="Full Name"
+            android:textColor="@color/WhiteColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nav_drawer_user_profilePicture_img" />
+
+        <TextView
+            android:id="@+id/nav_drawer_user_userType_txtVw"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:text="User Type"
+            android:textColor="@color/WhiteColor"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/nav_drawer_user_name_txtVw"
+            app:layout_constraintStart_toStartOf="@+id/nav_drawer_user_name_txtVw"
+            app:layout_constraintTop_toBottomOf="@+id/nav_drawer_user_name_txtVw" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/nav_drawer_profile_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:srcCompat="@drawable/nav_drawer_profile_icon" />
+
+    <Button
+        android:id="@+id/nav_drawer_profile_btn"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:gravity="left|center"
+        android:text="Profile"
+        android:textAllCaps="false"
+        android:paddingLeft="10dp"
+        android:textColor="@color/BackgroundColor"
+        android:textSize="18sp"
+        android:onClick="goToUserMyProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/nav_drawer_profile_icon"
+        app:layout_constraintTop_toTopOf="@+id/nav_drawer_profile_icon" />
+
+    <ImageView
+        android:id="@+id/nav_drawer_transactions_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/nav_drawer_profile_icon"
+        app:layout_constraintTop_toBottomOf="@+id/nav_drawer_profile_icon"
+        app:srcCompat="@drawable/nav_drawer_transactions_icon" />
+
+    <Button
+        android:id="@+id/nav_drawer_transactions_btn"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:gravity="left|center"
+        android:paddingLeft="10dp"
+        android:text="Transactions"
+        android:textAllCaps="false"
+        android:onClick="goToTransactionHistory"
+        android:textColor="@color/BackgroundColor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/nav_drawer_profile_btn"
+        app:layout_constraintStart_toEndOf="@+id/nav_drawer_transactions_icon"
+        app:layout_constraintTop_toTopOf="@+id/nav_drawer_transactions_icon" />
+
+    <ImageView
+        android:id="@+id/nav_drawer_bike_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/nav_drawer_transactions_icon"
+        app:layout_constraintTop_toBottomOf="@+id/nav_drawer_transactions_icon"
+        app:srcCompat="@drawable/nav_drawer_bike_icon" />
+
+    <Button
+        android:id="@+id/nav_drawer_be_a_driver_btn"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:gravity="left|center"
+        android:paddingLeft="10dp"
+        android:text="Be a rider"
+        android:textAllCaps="false"
+        android:textColor="@color/YellowColor"
+        android:textSize="18sp"
+        android:onClick="goToUserBe_a_Rider"
+        app:layout_constraintEnd_toEndOf="@+id/nav_drawer_transactions_btn"
+        app:layout_constraintStart_toEndOf="@+id/nav_drawer_bike_icon"
+        app:layout_constraintTop_toTopOf="@+id/nav_drawer_bike_icon" />
+
+    <ImageView
+        android:id="@+id/nav_drawer_logout_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/nav_drawer_transactions_icon"
+        app:layout_constraintTop_toBottomOf="@+id/nav_drawer_transactions_icon"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/nav_drawer_logout_icon" />
+
+    <Button
+        android:id="@+id/nav_drawer_logout_btn"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:gravity="left|center"
+        android:paddingLeft="10dp"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="@color/BackgroundColor"
+        android:textSize="18sp"
+        android:onClick="logout"
+        app:layout_constraintEnd_toEndOf="@+id/nav_drawer_transactions_btn"
+        app:layout_constraintStart_toEndOf="@+id/nav_drawer_logout_icon"
+        app:layout_constraintTop_toTopOf="@+id/nav_drawer_logout_icon" />
+</android.support.constraint.ConstraintLayout>

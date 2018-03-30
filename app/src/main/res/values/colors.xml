@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#006ccb</color>
+    <color type="color" name="signInColor">#39b44a</color>
+    <color type="color" name="signUpColor">#5A595B</color>
+    <color type="color" name="nextColor">#62bef7</color>
+    <color type="color" name="newAppBarColor">#ff5722</color>
+
+    <color name="BackgroundColor">#353a67</color>
+    <color name="YellowColor">#fdb03a</color>
+    <color name="GreenColor">#39b44a</color>
+    <color name="BlueColor">#3976b4</color>
+    <color name="WhiteColor">#ffffff</color>
+    <color name="GrayColor">#636363</color>
+    <color name="BlackColor">#0a0a0a</color>
+    <color name="FormColor">#ededed</color>
+    <color name="PlaceHolderColor">#bcbcbc</color>
+    <color name="RedColor">#cb5858</color>
+    <color name="colorGrey">#c3c3c3 </color>
+</resources>
